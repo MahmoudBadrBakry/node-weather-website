@@ -14,8 +14,8 @@ const forecast = (longitude,latitude,callback)=>{
             let temperature = currently.temperature
             let precipProbability = currently.precipProbability*100.0
             callback(undefined, 'hi :)   the weather is ' + daily.data[0].summary + ' the highest temprature is '
-            + hourly.data[17].temperature
-            + '    and the lowwest is ' + hourly.data[5].temperature 
+            + daily.data[0].temperatureHigh
+            + '    and the lowwest is ' + daily.data[0].temperatureLow
             + '    it\'s currently ' + temperature 
             + ' degrees out. There is a ' + precipProbability + '% chance of Rain')
         }
